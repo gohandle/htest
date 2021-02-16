@@ -65,7 +65,7 @@ func (rb *RequestBuilder) WithHeader(k, v string) *RequestBuilder {
 		rb.hdr = http.Header{}
 	}
 
-	rb.hdr.Set(k, v)
+	rb.hdr.Add(k, v)
 	return rb
 }
 
